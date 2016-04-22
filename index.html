@@ -14,36 +14,31 @@
 		<script type="text/javascript" src="mturk.js" /></script>
 		<script type="text/javascript" src="hit_script.js" /></script>
 		<style>
-				img{
-					vertical-align:middle;
-					width:20%;
-				}
 				#goldstandardquestion{
 					vertical-align:middle;
 					width:30%;
 				}
-				.img-container{
-					padding:10px;
-					border:5px solid transparent;
-				}
 				.hidden {
 				display:none;
 				}
+				fieldset { border: none; }
+
 			</style>
   </head>
 
-  <body>
-   <form id="mturk_form" name="mturk_form" method="GET">
+  <body style="font-family:sans-serif">
+	 <!--body{background-image: url("background2.jpg");}-->
+   <form id="mturk_form" name="mturk_form" method="GET" >
     <fieldset>
-				<h1>Instruction</h1>
+				<center><h1>Instructions</h1>
 				<p>You are asked to make a decision! (gasp) <br />
 				From the folllowing two images below please pick the best option that answers: <b id="context">What should I wear to a birthday party?</b>
 				<br />
 				We ask that you make the decision seriously, as it's important for the person who asked your opinion!</p>
-				<br />
+				<br /> <br />
 				<div id="goldstandardquestion">
 						Before we begin, please answer the following question:
-						<br />	<br />
+						<br />	<br /> <br />
 						<b id="context">What is the color of the text in the image below:</b>
 						<br />
 						<img id="goldstandardquestion" class="select" data-value="1" src="yellow.png" />
@@ -54,23 +49,28 @@
 				</div>
 
 				<div id="next_step_form" class="hidden">
-						<div class="row" style="margin:2em 0">
-								<div class="col-sm-6 img-container">
-										<img id="choice1" class="select" data-value="2" src="http://lh5.ggpht.com/-7SPW_8FvqKw/VEWSuMazf4I/AAAAAAAE2S0/YQAB6o8uL80/s0/img2447df0bff0ad0504116cc95ab28d6c3.jpg" />
-										Image 1 <input type="radio" name="image_choice" value="image1" />
+						<div class="row" >
+								<div id="image1" class="img-container" >
+										<img id="choice1" class="select" data-value="2" src="http://lh5.ggpht.com/-7SPW_8FvqKw/VEWSuMazf4I/AAAAAAAE2S0/YQAB6o8uL80/s0/img2447df0bff0ad0504116cc95ab28d6c3.jpg" style="float:left; width: 35%; margin-right:5%; margin-bottom: 2.5em;"/>
+
+										<!--<img id="choice1" class="select" data-value="2" src="http://www.gettyimages.pt/gi-resources/images/Homepage/Hero/PT/PT_hero_42_153645159.jpg" style="float:left; width: 35%; margin-right:5%; margin-bottom: 2.5em;"/>-->
 								</div>
-							<br />
-								<div class="col-sm-6 img-container">
-										<img id="choice2" class="select" data-value="3" src="http://fashionstylexpress.weebly.com/uploads/4/7/1/8/47181275/2588445_orig.jpg" />
-										Image 2 <input type="radio" name="image_choice" value="image2" />
+								<div id="image2" class="img-container" >
+										<img id="choice2" class="select" data-value="3" src="http://fashionstylexpress.weebly.com/uploads/4/7/1/8/47181275/2588445_orig.jpg" style="float:right;width: 40%; margin-bottom: 2.5em;" />
+										<!--<img id="choice2" class="select" data-value="3" src="https://cdn.eso.org/images/large/eso1520a.jpg" style="float:right;width: 40%; margin-bottom: 2.5em;" />-->
 								</div>
-								<br /> <br />
-								Reason for your choice: <input type="text" name="textbox1"><br><br>
 						</div>
+						<br /><br /><br />
+						<div style="margin-right: 10%; margin-top: 35%;">
+						Image 1 <input type="radio" name="image_choice" value="image1" style="margin-right: 40%;" required />
+						Image 2 <input type="radio" name="image_choice" value="image2" />
+				  	</div>
+						<br /><br /><br />
+						Reason for your choice: <input type="text" name="textbox1" ><br><br>
 						<br />
-						<input type="submit" value="Submit"/>
+						<input type="submit" value="Submit" />
 						<br />
-				</div>
+				</div></center>
     </fieldset>
   </form>
 
