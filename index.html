@@ -28,66 +28,116 @@
 					display:inline-block;
 				}
 				.img-container {
-					text-align:center
+					text-align:center;
 			    height: 400px;
 			    width: 400px;
 			  }
+				body {
+					background: #f5fec9 url(lowpoly.png) repeat center top;
+				}
+				.submit {
+					background: #008000;
+					color: #fff;
+					border: 1px solid #eee;
+					border-radius: 20px;
+					box-shadow: 5px 5px 5px #eee;
+					width: 8em;  height: 5em;
+				}
+
+				.submit:hover {
+					background: #00b300;
+					color: #fff;
+					border: 1px solid #eee;
+					border-radius: 20px;
+					box-shadow: 5px 5px 5px #eee;
+					width: 8em;  height: 5em;
+				}
+
+			  .textbox {
+			    border: 1px solid #c4c4c4;
+			    height: 25px;
+			    width: 275px;
+			    font-size: 13px;
+			    padding: 4px 4px 4px 4px;
+			    border-radius: 4px;
+			    -moz-border-radius: 4px;
+			    -webkit-border-radius: 4px;
+			    box-shadow: 0px 0px 8px #d9d9d9;
+			    -moz-box-shadow: 0px 0px 8px #d9d9d9;
+			    -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+			   }
+
+			.textbox:focus {
+			    outline: none;
+			    border: 1px solid #7bc1f7;
+			    box-shadow: 0px 0px 8px #7bc1f7;
+			    -moz-box-shadow: 0px 0px 8px #7bc1f7;
+			    -webkit-box-shadow: 0px 0px 8px #7bc1f7;
+			 }
 
 			</style>
   </head>
 
-  <body style="font-family:sans-serif">
+  <body style="font-family:sans-serif;">
+		<div style="	width:1150px; height: 1300px; background-color:#FFF; margin: 0 auto; margin-top: 80px; margin-bottom: 80px;">
 	 <!--body{background-image: url("background2.jpg");}-->
    <form id="mturk_form" name="mturk_form" method="GET" >
     <fieldset>
-				<center><h1>Instructions</h1>
-				<p>You are asked to make a decision! (gasp) <br />
-				From the folllowing two images below please pick the best option that answers the question below.
-				<br />
-				We ask that you make the decision seriously, as it's important for the person who asked your opinion!</p>
-				<br /> <br />
-			  <b id="context">What should I wear to a birthday party?</b>
-				<br /> <br />		<br /> <br />		<br /> <br />
-				<div id="goldstandardquestion">
-						Before we begin, please answer the following question:
-						<br />	<br /> <br />
-						<b id="context">What is the color of the text in the image below:</b>
-						<br />
-						<img id="goldstandardquestion" class="select" data-value="1" src="yellow.png" />
-						<br /><br /> <br />
-						yellow <input type="radio" class="modeClass" name="change_mode" value="Wrong Answer" />
-						green <input type="radio" class="modeClass" name="change_mode" value="Next Step" />
-		        <br />
-				</div>
+				<center>
+					<h1>Instructions</h1>
+					<p>You are asked to make a decision! (gasp) <br />
+					From the folllowing two images below please pick the best option that answers the question below.
+					<br />
+					We ask that you make the decision seriously, as it's important for the person who asked your opinion!</p>
+					<br /> <br />
 
-				<div id="next_step_form" class="hidden">
-						<div class="row" >
-								<div id="image1" class="img-container" style="float:left;" >
-									<!--<img id="choice1" class="select" data-value="2" src="http://lh5.ggpht.com/-7SPW_8FvqKw/VEWSuMazf4I/AAAAAAAE2S0/YQAB6o8uL80/s0/img2447df0bff0ad0504116cc95ab28d6c3.jpg">-->
-									<img id="choice1" class="select" data-value="2" src="http://www.gettyimages.pt/gi-resources/images/Homepage/Hero/PT/PT_hero_42_153645159.jpg">
-										<!--<img id="choice1" class="select" data-value="2" src="http://lh5.ggpht.com/-7SPW_8FvqKw/VEWSuMazf4I/AAAAAAAE2S0/YQAB6o8uL80/s0/img2447df0bff0ad0504116cc95ab28d6c3.jpg" style="float:left; width: 35%; margin-right:5%; margin-bottom: 2.5em;"/>-->
-										<!--<img id="choice1" class="select" data-value="2" src="http://www.gettyimages.pt/gi-resources/images/Homepage/Hero/PT/PT_hero_42_153645159.jpg" style="float:left; width: 35%; margin-right:5%; margin-bottom: 2.5em;"/>-->
+					<div class="question">
+				  	<b id="context">What should I wear to a birthday party?</b>
+					</div>
+
+					<br /> <br />	<br /> <br />	<br /> <br />
+
+					<div id="goldstandardquestion">
+							Before we begin, please answer the following question:
+							<br />	<br /> <br />
+							<b id="context">What is the color of the text in the image below:</b>
+							<br />
+							<img id="goldstandardquestion" class="select" data-value="1" src="yellow.png" />
+							<br /><br /> <br />
+							yellow <input type="radio" class="modeClass" name="change_mode" value="Wrong Answer" />
+							green <input type="radio" class="modeClass" name="change_mode" value="Next Step" />
+			        <br />
+					</div>
+
+					<div id="next_step_form" class="hidden">
+								<div class="row" >
+										<div id="image1" class="img-container" style="float:left;" >
+											<img id="choice1" class="select" data-value="2" src="http://lh5.ggpht.com/-7SPW_8FvqKw/VEWSuMazf4I/AAAAAAAE2S0/YQAB6o8uL80/s0/img2447df0bff0ad0504116cc95ab28d6c3.jpg">
+											<!--<img id="choice1" class="select" data-value="2" src="http://www.gettyimages.pt/gi-resources/images/Homepage/Hero/PT/PT_hero_42_153645159.jpg">-->
+										</div>
+										<div id="image2" class="img-container" style="float:right;">
+											<img id="choice2" class="select" data-value="3" src="http://fashionstylexpress.weebly.com/uploads/4/7/1/8/47181275/2588445_orig.jpg" >
+										  <!--<img id="choice2" class="select" data-value="3" src="https://cdn.eso.org/images/large/eso1520a.jpg">-->
+										</div>
 								</div>
-								<div id="image2" class="img-container" style="float:right;">
-									<!--<img id="choice2" class="select" data-value="3" src="http://fashionstylexpress.weebly.com/uploads/4/7/1/8/47181275/2588445_orig.jpg" >-->
-								  <img id="choice2" class="select" data-value="3" src="https://cdn.eso.org/images/large/eso1520a.jpg">
-										<!--<img id="choice2" class="select" data-value="3" src="http://fashionstylexpress.weebly.com/uploads/4/7/1/8/47181275/2588445_orig.jpg" style="float:right;width: 40%; margin-bottom: 2.5em;" />-->
-										<!--<img id="choice2" class="select" data-value="3" src="https://cdn.eso.org/images/large/eso1520a.jpg" style="float:right;width: 40%; margin-bottom: 2.5em;" />-->
-								</div>
-						</div>
-						<br /><br /><br />
-						<div style="margin-right: 10%; margin-top: 35%;">
-						<div style="float:left; margin-left: 13%;" >Image 1 <input type="radio" name="image_choice" value="image1" required /></div>
-						<div style="float:right;margin-right: 3%;">Image 2 <input type="radio" name="image_choice" value="image2" /></div>
-				  	</div>
-						<br /><br /><br /><br />
-						Reason for your choice: <input type="text" name="textbox1" ><br><br>
-						<br />
-						<input type="submit" value="Submit" />
-						<br />
-				</div></center>
+
+								<br /><br /><br />
+
+								<div style="margin-right: 10%; margin-top: 35%;">
+									<div style="float:left; margin-left: 13%;" >Image 1 <input type="radio" name="image_choice" value="image1" required /></div>
+									<div style="float:right;margin-right: 3%;">Image 2 <input type="radio" name="image_choice" value="image2" /></div>
+						  	</div>
+
+								<br /><br /><br /><br />
+
+								Reason for your choice: <input type="text" class="textbox" name="textbox1" ><br><br>
+								<br />
+								<input type="submit" class="submit" value="Submit" />
+								<br />
+					</div>
+			</center>
     </fieldset>
   </form>
-
+	</div>
   </body>
 </html>
