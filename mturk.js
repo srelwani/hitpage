@@ -25,8 +25,6 @@ function gup(name) {
 
 //  Turkify the captioning page.
 $(document).ready(function () {
-
-  var aid_input = $("<input type='hidden' name='assignmentId' value='" + aid + "'>").appendTo($(form_selector));
   var question = gup("question");
   var image1 = gup("image1");
   var image2 = gup("image2");
@@ -45,6 +43,7 @@ $(document).ready(function () {
 
     // Add a new hidden input element with name="assignmentId" that
     // with assignmentId as its value.
+    var aid_input = $("<input type='hidden' name='assignmentId' value='" + aid + "'>").appendTo($(form_selector));
 
     // Make sure the submit form's method is POST
     $(form_selector).attr('method', 'POST');
