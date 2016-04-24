@@ -1,3 +1,15 @@
+
+// function for getting URL parameters
+function gup(name) {
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var results = regex.exec(window.location.href);
+  if(results == null)
+    return "";
+  else return unescape(results[1]);
+}
+
 $(document).ready(function(){
 /*	$(".img-container").click(function(){
     $(".img-container").removeClass("active");
@@ -17,5 +29,9 @@ $(document).ready(function(){
           $("#goldstandardquestion").hide();
       }
   });
+
+  $("#context").text(gup("question"));
+  $("#choice1").attr("src",gup("image1"));
+  $("#choice2").attr("src",gup("image2"));
 
 });
