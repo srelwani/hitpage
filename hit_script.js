@@ -31,6 +31,7 @@ $(document).ready(function(){
   });
 
   $("#context").text(gup("question"));
+  $("#description").text(gup("description"));
   $("#choice1").attr("src",gup("image1"));
   $("#choice2").attr("src",gup("image2"));
 
