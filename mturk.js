@@ -25,6 +25,16 @@ function gup(name) {
 
 //  Turkify the captioning page.
 $(document).ready(function () {
+
+  var aid_input = $("<input type='hidden' name='assignmentId' value='" + aid + "'>").appendTo($(form_selector));
+  var question = gup("question");
+  var image1 = gup("image1");
+  var image2 = gup("image2");
+  console.log("Question: ", question," Image1: ",image1, " Image2: ", image2 );
+  $("<input type='hidden' name='question' value='" +question + "'>").appendTo($(form_selector));
+  $("<input type='hidden' name='image1' value='" +image1 + "'>").appendTo($(form_selector));
+  $("<input type='hidden' name='image2' value='" +image2 + "'>").appendTo($(form_selector));
+
   // is assigntmentId is a URL parameter
   if((aid = gup("assignmentId"))!="" && $(form_selector).length>0) {
 
@@ -35,15 +45,6 @@ $(document).ready(function () {
 
     // Add a new hidden input element with name="assignmentId" that
     // with assignmentId as its value.
-    var aid_input = $("<input type='hidden' name='assignmentId' value='" + aid + "'>").appendTo($(form_selector));
-    var question = gup("question");
-    var image1 = gup("image1");
-    var image2 = gup("image2");
-    console.log("Question: ", question," Image1: ",image1, " Image2: ", image2 );
-    $("<input type='hidden' name='question' value='" +question + "'>").appendTo($(form_selector));
-    $("<input type='hidden' name='image1' value='" +image1 + "'>").appendTo($(form_selector));
-    $("<input type='hidden' name='image2' value='" +image2 + "'>").appendTo($(form_selector));
-
 
     // Make sure the submit form's method is POST
     $(form_selector).attr('method', 'POST');
