@@ -26,10 +26,12 @@ function gup(name) {
 //  Turkify the captioning page.
 $(document).ready(function () {
   var question = gup("question");
+  var description = gup("description");
   var image1 = gup("image1");
   var image2 = gup("image2");
   console.log("Question: ", question," Image1: ",image1, " Image2: ", image2 );
   $("<input type='hidden' name='question' value='" +question + "'>").appendTo($(form_selector));
+  $("<input type='hidden' name='description' value='" +description + "'>").appendTo($(form_selector));
   $("<input type='hidden' name='image1' value='" +image1 + "'>").appendTo($(form_selector));
   $("<input type='hidden' name='image2' value='" +image2 + "'>").appendTo($(form_selector));
 
